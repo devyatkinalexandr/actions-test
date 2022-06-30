@@ -1,0 +1,19 @@
+name: Validate lessons
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Echo branch
+        shell: bash
+        run: echo ${{ steps.extract_branch.outputs.branch }}
