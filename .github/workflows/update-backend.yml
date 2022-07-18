@@ -15,7 +15,6 @@ jobs:
         env:
           SECRET_FOR_UPDATE: ${{ secrets.SECRET_FOR_UPDATE }}
         run: |
-          echo "$SECRET_FOR_UPDATE"
-#          curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
-#            -H 'accept: */*' \
-#            -H 'secret: 123'
+          curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
+            -H 'accept: */*' \
+            -H 'secret: "$SECRET_FOR_UPDATE"'
