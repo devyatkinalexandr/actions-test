@@ -1,0 +1,21 @@
+name: Update backend
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_info:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: update info
+        shell: bash
+        env:
+          SECRET_FOR_UPDATE: ${{ secrets.SECRET_FOR_UPDATE }}
+        run: |
+          echo "$SECRET_FOR_UPDATE"
+#          curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
+#            -H 'accept: */*' \
+#            -H 'secret: 123'
