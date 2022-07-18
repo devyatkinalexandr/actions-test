@@ -13,5 +13,5 @@ jobs:
       - name: update info
         shell: bash
         run: |
-          chmod +x ./.github/scripts/markdown-update-check.sh 
-            && ./.github/scripts/markdown-update-check.sh ${{ secrets.SECRET_FOR_UPDATE }}
+          chmod +x ./.github/scripts/markdown-update-check.sh && \
+          ./.github/scripts/markdown-update-check.sh ${{ secrets.SECRET_FOR_UPDATE }}
