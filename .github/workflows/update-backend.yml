@@ -19,4 +19,4 @@ jobs:
           echo ${{ secrets.SECRET }}
           curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
             -H 'accept: */*' \
-            -H 'secret: "'"$SECRET"'"'
+            -H 'secret: "$SECRET"'
