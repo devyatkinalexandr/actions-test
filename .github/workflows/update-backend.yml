@@ -12,9 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: update info
         shell: bash
-        env:
-          SECRET: ${{ secrets.SECRET_FOR_UPDATE }}
         run: |
           curl -X 'GET' 'https://api-dev.waves.tech/api/v1/test' \
             -H 'accept: */*' \
-            -H 'secret: \${{ secrets.SECRET_FOR_UPDATE }}'
+            -H 'secret: ${{ secrets.SECRET_FOR_UPDATE }}'
