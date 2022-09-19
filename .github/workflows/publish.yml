@@ -2,16 +2,15 @@ name: Publish waves-rust to crate.io
 
 on:
   push:
-    branches:
-      - master
     tags:
       - v[0-9].[0-9]+.[0-9]+
 
 jobs:
   publish:
+#    if: ${{ ${GITHUB_REF##*/} == 'master' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: publish
         shell: bash
-        run: echo publish
+        run: echo ${GITHUB_REF##*/} & echo ${{ ${GITHUB_REF##*/} == 'master' }}
