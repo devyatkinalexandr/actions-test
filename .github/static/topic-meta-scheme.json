@@ -11,15 +11,6 @@
     "description": {
       "$ref": "#/definitions/nonEmptyString"
     },
-    "ref1": {
-      "$ref": "#/definitions/uuid"
-    },
-    "ref2": {
-      "$ref": "#/definitions/uuid"
-    },
-    "ref3": {
-      "$ref": "#/definitions/uuid"
-    },
     "hashtags": {
       "$ref": "#/definitions/hashtags"
     }
@@ -45,9 +36,6 @@
     "guid",
     "title",
     "description",
-    "ref1",
-    "ref2",
-    "ref3",
     "hashtags"
   ]
 }

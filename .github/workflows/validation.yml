@@ -4,14 +4,6 @@ on:
   pull_request:
 
 jobs:
-  lesson_md_existence:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Check lesson.md existance
-        shell: bash
-        run: chmod +x ./.github/scripts/check-lesson-md-existance.sh && ./.github/scripts/check-lesson-md-existance.sh
-
   lesson_meta_existence:
     runs-on: ubuntu-latest
     steps:
